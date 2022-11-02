@@ -8,10 +8,10 @@ def tinh(n):
             if n[i] == '0':
                 continue
             else:
-                tich *= int(n[i])
+                tich = tich * int(n[i])
     if tich == 1:
         tich = 0
-    print(sum + " " + tich)
+    print(sum, tich)
 
 
 t = int(input())
