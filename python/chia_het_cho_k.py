@@ -1,17 +1,12 @@
-import math
+a, k, n = [int(i) for i in input().split()]
 
-a, k, n = input().split()
-a = int(a)
-k = int(k)
-n = int(n)
-arr = []
-if a >= n:
+res = -1
+n = int(n/k)+1
+for i in range(n):
+    x = i*k-a
+    if x > 0:
+        res = 1
+        print(x, end=' ')
+if res == -1:
     print("-1")
-else:
-    for i in range(1, int(n/2) + 1):
-        if i % k == 0 and i > a:
-            arr.append(i - a)
-        if (n-i) % k == 0:
-            arr.append(n - i - a)
-    arr.sort()
-    print(arr)
+
